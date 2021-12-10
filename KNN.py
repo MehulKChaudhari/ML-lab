@@ -21,6 +21,7 @@ classifier = KNeighborsClassifier(n_neighbors=3)
 classifier.fit(x,y)
 y_pred = classifier.predict([[6,6]])
 print("Prediction 1: ", y_pred)
+
 #classifier 2 distance weighted classifier for point [6,3]
 classifier2 = KNeighborsClassifier(n_neighbors=3, weights="distance")
 classifier2.fit(x,y)

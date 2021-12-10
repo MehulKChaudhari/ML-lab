@@ -1,11 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.datasets import make_blobs # make_blobs helps generating datasets 
+from sklearn.datasets import make_blobs 
+# make_blobs helps generating datasets 
 from sklearn.cluster import KMeans
+
 data = make_blobs(n_samples=200, centers=4, n_features=2, cluster_std=1.6, random_state=50)
 points = data[0]
 #print(points)
 kmeans = KMeans(n_clusters=4) 
+
 kmeans.fit(points) 
 plt.scatter(data[0][:, 0], data[0][:, 1]) 
 plt.show()
